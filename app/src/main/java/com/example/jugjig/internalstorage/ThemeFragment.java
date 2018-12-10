@@ -151,3 +151,19 @@ public class ThemeFragment extends Fragment implements View.OnClickListener {
         }
     }
 }
+
+
+/*****************************************************
+  void onGalleryClick (View v) {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+
+        File _picDirect = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+        String _picPath = _picDirect.getPath();
+
+        Uri uri = Uri.parse(_picPath);
+
+        intent.setDataAndType(uri, "image/*");
+
+        startActivityForResult(intent, IMG_GALLERY_REQUEST);
+    }
+ */

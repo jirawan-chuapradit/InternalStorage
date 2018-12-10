@@ -12,13 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.util.ArrayList;
-
-import static android.content.Context.MODE_PRIVATE;
 
 public class MenuFragment extends Fragment {
 
@@ -61,7 +55,7 @@ public class MenuFragment extends Fragment {
                 }else if(_menu.get(position).equals("View")){
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
-                            .replace(R.id.main_view, new ViewFragment())
+                            .replace(R.id.main_view, new WeightFragment())
                             .addToBackStack(null)
                             .commit();
                     Log.d("Menu", "GOTO VIEW");
