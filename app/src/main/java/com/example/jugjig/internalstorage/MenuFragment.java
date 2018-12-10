@@ -39,6 +39,8 @@ public class MenuFragment extends Fragment {
         _menu.add("View");
         _menu.add("Theme");
         _menu.add("Image View");
+        _menu.add("show staic Image");
+
 
         ArrayAdapter<String> _menuAdapter = new ArrayAdapter<>(
                 getActivity(),
@@ -74,6 +76,12 @@ public class MenuFragment extends Fragment {
                     getActivity().getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.main_view, new ImageviewFragment())
+                            .addToBackStack(null)
+                            .commit();
+                }else if(_menu.get(position).equals("show staic Image")){
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_view, new StaticFragment())
                             .addToBackStack(null)
                             .commit();
                 }
